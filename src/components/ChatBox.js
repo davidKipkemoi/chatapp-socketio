@@ -49,7 +49,7 @@ export  function ChatBoxSender({avatar,user,message}) {
                />}
           />
              
-          <p style={{padding:20, backgroundColor:"blue", borderRadius:10, maxWidth:"60%"}}>
+          <p style={{padding:20, backgroundColor:"yellow", borderRadius:10, maxWidth:"60%"}}>
               <strong style={{fontSize:25}}>
                   {user}
               </strong> <br></br>
