@@ -26,13 +26,14 @@ const styles={
     justifyContent:'space-evenly', 
     alignItems:'center'}
 }
-export default function InputText(addMessage) {
+export default function InputText({addMessage}) {
   const [message,setMessage] = useState('')
 
   function addAMessage(){
     addMessage({
       message
     })
+    setMessage("")
   }
 
   return (

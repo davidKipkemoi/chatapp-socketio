@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { Input,Button } from 'antd';
-import Column from 'antd/es/table/Column';
-export default function UserLogin(setUser) {
+import _ from 'lodash'
+
+
+export default function UserLogin({setUser}) {
   const [user,setAUser] = useState('')
     function handleSetUser(){
       if(!user) return
@@ -11,20 +13,22 @@ export default function UserLogin(setUser) {
       
     }
   return (
-    <div>
-      <div style={{display:"flex",flexDirection:Column}}>
-      <img src="https://plus.unsplash.com/premium_photo-1681487872232-fa622a6dd59e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" 
+    <div style={{padding:10,height:"100vH"}}>
+      <div >
+      <img style={{}} 
       alt=""/>
-      <h1> Enter Your Username</h1>
+      <h1 style={{background:"black",color:"white",textAlign:'center'}}> Enter Your Username</h1>
       </div>
-      <div>
+      <div style={{display:'flex' ,justifyContent:'center', padding:10}}>
       <Input 
+      
+      style={{ height:50, width:'50%', margin:20}}
       value={user}
       onChange={e=>setAUser(e.target.value)}
       placeholder="Enter Username" />
-      <Button ghost style={{ width:'10%' ,
-      marginTop:"120px",
-      height:50 ,
+      <Button ghost style={{ width:'10' ,
+      paddingLeft:"10px",
+      height:80 ,
      fontWeight:'bold', 
     borderRadius:10 ,
     fontSize:18 ,}}
